@@ -1,3 +1,10 @@
+/***
+ * 
+ * @author PavSingh
+ * Date: 2015/01/29
+ * Purpose: Test the hero class.
+ *
+ */
 public class TesterClass {
 
 	public static void main(String[] args) {

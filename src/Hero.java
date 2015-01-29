@@ -17,7 +17,11 @@ public class Hero {
 	public String name;
 	
 	
-	// CONSTRUCTOR 
+	/***
+	 *  CONSTRUCTOR 
+	 * @param name
+	 * Purpose: Initite the name of the hero .
+	 */
 	public Hero(String name) 
 	{
 		this.name = name;
@@ -26,27 +30,39 @@ public class Hero {
 	
 	
 	
-	// PRIVATE METHODS 
+	/***
+	 * Private Mathod
+	 * purpose: used to display the hero's abilities which are the random numbers. 
+	 */
 	private void generateAbilties() {
 		this.strength = (int)(Math.random() * 100 + 1);
 		this.speed = (int)(Math.random() * 100 + 1);
 		this.health = (int)(Math.random() * 100 + 1);
 	}
 	
-	// FIGHT METHODS
+	/***
+	 *  FIGHT METHODS
+	 *  purpose: Used to figureout, Hero attacked or not as based on hit attempt. 
+	 *  display the missed attack.
+	 */
 		public void fight()
 		{
 			if(hitAttempt()==true){
-			System.out.println(this.name + " did damage "+ hitDamage() );
+			System.out.println(this.name + " Attacked !!! ");
+			System.out.println(this.name +" Did the Damage of " + hitDamage());
 				
 			}
 			
 			else{
-			System.out.println(this.name + "Missed the Attack");
+			System.out.println(this.name + " Missed the Attack");
 			}
 		}
 		
-		//HIT ATTEMPT METHOD
+		/***
+		 * HIT ATTEMPT METHOD 
+		 * purpose: Used for figure out hero gonna be hit or not as per based on the possibilites 20%
+		 * @return ture or false
+		 */
 		private boolean hitAttempt()
 		{
 			if(Math.random()*10 >= 2){
@@ -56,7 +72,11 @@ public class Hero {
 			}
 		}
 		
-		//HIT DAMAGED METHOD
+		/***
+		 * HIT DAMAGED METHOD
+		 * purpose: Used to identify the attempted damage on hero.
+		 * @return: 
+		 */
 		private int hitDamage()
 		{
 			int damage = (int)(Math.random() * 6 + 1);
@@ -64,7 +84,11 @@ public class Hero {
 			return damageDid;
 		}
 		
-		//SHOW METHOD
+		/***
+		 * SHOW METHOD 
+		 * Used for display the value of the hero's abilities with proper stats.
+		 */
+		
 		public void show()
 		{
 			System.out.println ("Strength: " + this.strength);
